@@ -6,12 +6,12 @@
 </head>
 
 <body>
-	<div id="container"> 
-	
+	<div id="container">
+
 		<div id="header">
 			<h1> Tristan Technologies</h1>
 		</div>
-		
+
 		<div id = "content">
 			<div id ="nav">
 				<h3>Navigation</h3>
@@ -28,19 +28,86 @@
 					<li><a href ="website.html">Website</a></li>
 					<li><a href="paper_plane.html">Paper Plane</a></li>
 			</div>
-			
+
 			<div id="main">
 			<h2>Review</h2>
 			<hr>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+			<h4>What went right and what went wrong</h4>
+
+			<p>By the end of the 3 days, we did have some measure of a functional system,
+			but many aspects of it were still not satisfactory. Lets see what
+			our system managed to do: </p>
+
+			<li>Rotate using computer control</li>
+			<li>Rev up the flywheel to a variable speed</li>
+			<li>Launch the glider over a distance</li>
+
+			<p>Despite the above, the mechanisms to perform each individual task all
+			suffered from some issue or another. For starters, the rotator mechanism we
+			employed suffered from an astounding lack of stability, and the turret assmebly
+			(ie. the business part of the system) kept falling over when the command
+			was sent to rotate it. The rotator base itself was based of the 'ball bearing adaptor'
+			that we 3D printed, and then repurposed after we found the bearing to be redundant.</p>
+
+			<p>Another issue was the motor power draw. When we (Hans) tested the motors at home
+			the motor speed was very high and satisfactory. The test was made with the
+			corresponding interface circuitry (ie. the transistors etc.). The results of
+			the test showed us that the drive system was performing to spec. However,
+			upon actual use with the PSU, it was found that the	motor current draw started
+			to choke. The current draw during testing at home was about 1 Amp per motor.
+			This had dropped to an embarassing 0.3 amp with the PSU. What was once a credible
+			launching system now looked more like a pre school toy with the abysmal motor speed.
+			We had to try changing out certain key components, like transistors, as well as
+			lowering the value of our resistors. Fortunately, we had help from some of
+			our seniors in the rewiring, which freed up valuable time to troubleshoot the
+			other components.</p>
+
+			<p>Finally there was the launcher itself. The cardboard cut out structure was
+			in itself very rough and contributed to alot of friction, making it inefficient.
+			This itself would have been tolerable if the launching speeds were high enough.
+			Unfortunately due to the above, this was not the case and the friction penalty
+			incurred was sufficient to severely limit the range of the launch, to about a meter
+			at best</p>
+
+			<h4><br>Improvements?</h4>
+
+			<p>The single most glaring fix we could perform is to rebuild the turret
+			assembly using laser cut acrylic. This would reduce the friction experienced
+			during launch significantly. Also, based on the designs of others, we would
+			probably increase the depth of the channel where the paper plane sits in.
+			Not only would this allow for a plane with a deeper base, this will also reduce
+			friction during the launch, as the base of the plane wont scrape against the base
+			of the assembly.</p>
+
+			<p>The next thing on the list would be the rotator. The quickest solution to
+			prevent the turret assembly from falling over would be to slow the speed of
+			the servo rotation. While this might work, it dosent look as cool as when the
+			servo just swings 90 degrees at full speed, so lets examine other possible alternatives.
+			We would probably need a more secure way to mount the base plate of the turret
+			to the servo. The contact area was too small to prevent the thing from just
+			popping off. Ideally we would have a larger servo horn.
+			Alternatively, we could have the servo drive the rotator plate remotely, through
+			a long rod, while the rotator plate sits on a decently sized ball bearing.</p>
+
+			<p>Finally, it is a little disappointing to say that we are still unable to
+			identify what is causing the low motor current draw. Nonetheless, we do
+			have a stopgap solution provided to us by our lecturers. This was to increase
+			the voltage accross the motor and 'force' an increased draw in current, which
+			allowed it to spin faster. In the actual event, this was employed and we
+			barely got the plane to launch. Consequently, we also had to provide
+			the servo supply rail with its own seperate 5V power source, lest it would
+			have shorted our poor servo out.</p>
+
+			</aside>
+
 			</div>
 		</div>
 
 		<div id="footer">
 			Copyright Tristan Technologies 2018 &copy;
-		</div>	
-		
+		</div>
+
 	</div>
-</body>				
+</body>
 </html>
